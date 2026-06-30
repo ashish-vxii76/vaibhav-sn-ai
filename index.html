@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vaibhav Aggarwal · Head of Applied AI · ServiceNow AI Specialist</title>
+<meta name="description" content="Vaibhav Aggarwal, Head of Applied AI and ServiceNow AI Specialist. Builder of Dev Accelerator and the Knowledge Quality Accelerator, handpicked by the ServiceNow Customer Excellence Group. 20 years of enterprise delivery; 7 named AI products shipped; 30,000+ followers." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif' font-weight='bold' fill='%236d5dfc'>V</text></svg>" />
+<meta name="theme-color" content="#07070d" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Vaibhav Aggarwal · Head of Applied AI" />
+<meta property="og:description" content="ServiceNow AI Specialist. Builder of Dev Accelerator and the Knowledge Quality Accelerator. Handpicked by the ServiceNow Customer Excellence Group. 30,000+ followers." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+
+  :root{
+    --ink:#07070d; --ink-2:#0d0d17; --surface:#14141f; --surface-2:#1b1b29;
+    --gold:#8f81ff; --gold-bright:#2ad4ff; --gold-deep:#6d5dfc;
+    --ivory:#ecedf5; --muted:#9b9cb0; --muted-2:#6c6d82;
+    --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.14);
+    --serif:'Playfair Display',Georgia,serif;
+    --sans:'Inter',system-ui,sans-serif;
+    --display:'Manrope','Inter',sans-serif;
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  #certifications,#workshops,#recommendations{scroll-margin-top:96px}
+  body{
+    background:var(--ink); color:var(--ivory); font-family:var(--sans);
+    line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--gold);color:#07070d}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  section{position:relative}
+
+  /* ---------- Scroll progress + cursor glow ---------- */
+  #progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:200;
+    background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-bright));box-shadow:0 0 14px var(--gold)}
+  #glow{position:fixed;top:0;left:0;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(109,93,252,.10),transparent 60%);
+    pointer-events:none;transform:translate(-50%,-50%);z-index:1;transition:opacity .4s;mix-blend-mode:screen}
+
+  /* ---------- Nav ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .5s var(--ease)}
+  header.scrolled{background:rgba(10,11,15,.72);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);
+    border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;transition:height .4s var(--ease)}
+  header.scrolled .nav{height:66px}
+  .brand{display:flex;align-items:center;gap:13px;font-family:var(--display);font-weight:700;letter-spacing:.02em}
+  .monogram{width:42px;height:42px;border:1px solid var(--gold);color:var(--gold-bright);
+    display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:18px;
+    border-radius:9px;position:relative;overflow:hidden;transition:.4s}
+  .monogram::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(0,212,255,.18));opacity:0;transition:.4s}
+  .brand:hover .monogram::after{opacity:1}
+  .brand small{display:block;font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--muted)}
+  nav ul{display:flex;gap:18px;list-style:none;align-items:center}
+  nav ul a{font-size:13.5px;letter-spacing:.04em;color:var(--muted);position:relative;transition:color .3s;font-weight:500}
+  nav ul a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--gold);transition:width .35s var(--ease)}
+  nav ul a:hover{color:var(--ivory)} nav ul a:hover::after{width:100%}
+  .nav-cta{padding:10px 22px;border:1px solid var(--gold-deep);border-radius:50px;color:var(--gold-bright)!important;
+    font-weight:600;background:rgba(109,93,252,.06);
+    transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .nav-cta:hover{background:var(--gold);border-color:var(--gold);color:#07070d!important;
+    transform:translateY(-2px);box-shadow:0 8px 22px rgba(109,93,252,.28)}
+  .nav-cta::after{display:none}
+  .has-drop{position:relative}
+  .caret{font-size:9px;color:var(--gold);transition:transform .3s var(--ease);display:inline-block}
+  .has-drop:hover .caret{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(12px);min-width:200px;
+    background:rgba(13,15,21,.97);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);border:1px solid var(--line);
+    border-radius:13px;padding:8px;list-style:none;opacity:0;visibility:hidden;transition:.32s var(--ease);
+    z-index:120;box-shadow:0 24px 56px rgba(0,0,0,.5)}
+  .dropdown::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+  .has-drop:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(8px)}
+  .dropdown li{display:block}
+  .dropdown a{display:block;padding:10px 15px;border-radius:9px;font-size:13px;color:var(--muted);white-space:nowrap;letter-spacing:.02em}
+  .dropdown a::after{display:none}
+  .dropdown a:hover{background:var(--surface);color:var(--gold-bright)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;padding:6px}
+  .burger span{width:24px;height:2px;background:var(--ivory);transition:.3s}
+
+  /* ---------- Hero ---------- */
+  .hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden}
+  .aurora{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;will-change:transform}
+  .b1{width:560px;height:560px;background:radial-gradient(circle,#211c52,transparent 70%);top:-120px;left:-80px;animation:float1 18s var(--ease) infinite}
+  .b2{width:620px;height:620px;background:radial-gradient(circle,#06303a,transparent 70%);bottom:-180px;right:-120px;animation:float2 22s var(--ease) infinite}
+  .b3{width:440px;height:440px;background:radial-gradient(circle,#2a1145,transparent 70%);top:30%;left:45%;animation:float3 26s var(--ease) infinite}
+  @keyframes float1{50%{transform:translate(120px,80px) scale(1.15)}}
+  @keyframes float2{50%{transform:translate(-100px,-60px) scale(1.1)}}
+  @keyframes float3{50%{transform:translate(-80px,90px) scale(1.2)}}
+  .grid-overlay{position:absolute;inset:0;z-index:0;opacity:.4;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 75%)}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.32fr .68fr;gap:60px;align-items:center}
+  .hero-portrait{position:relative;justify-self:center;width:100%;max-width:360px;animation:portraitFloat 7s var(--ease) infinite}
+  @keyframes portraitFloat{50%{transform:translateY(-14px)}}
+  .portrait-frame{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--gold-deep);
+    box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(0,212,255,.12);
+    background:linear-gradient(160deg,var(--surface),var(--ink-2))}
+  .portrait-frame::after{content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none;
+    background:linear-gradient(160deg,transparent 55%,rgba(10,11,15,.55));mix-blend-mode:multiply}
+  .portrait-frame img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:saturate(1.02) contrast(1.02)}
+  .portrait-frame.noimg{aspect-ratio:1/1;display:grid;place-items:center}
+  .portrait-frame.noimg::before{content:"AJ";font-family:var(--serif);font-size:96px;font-weight:600;
+    color:var(--gold-deep);opacity:.5}
+  .portrait-frame.noimg::after{display:none}
+  .portrait-ring{position:absolute;inset:-14px;border:1px solid var(--line);border-radius:26px;pointer-events:none;
+    -webkit-mask:linear-gradient(160deg,#000,transparent 70%);mask:linear-gradient(160deg,#000,transparent 70%)}
+  .portrait-badge{position:absolute;bottom:18px;left:18px;right:18px;display:flex;align-items:center;gap:12px;
+    background:rgba(12,13,18,.66);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:13px;padding:11px 14px;z-index:2}
+  .portrait-badge .pb-ic{width:34px;height:34px;border-radius:9px;background:var(--gold);color:#07070d;
+    display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:16px;flex-shrink:0}
+  .portrait-badge .pb-t{font-family:var(--display);font-weight:700;font-size:13.5px;letter-spacing:.01em;line-height:1.15}
+  .portrait-badge .pb-s{font-size:11px;color:var(--muted);letter-spacing:.04em}
+  .portrait-tag{position:absolute;top:18px;right:-10px;background:var(--gold);color:#07070d;font-family:var(--display);
+    font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;border-radius:8px;
+    box-shadow:0 12px 30px rgba(0,0,0,.4);z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--gold);margin-bottom:26px;font-weight:600}
+  .eyebrow::before{content:"";width:30px;height:1px;background:var(--gold)}
+  .ping{width:7px;height:7px;border-radius:50%;background:var(--gold-bright);box-shadow:0 0 0 0 rgba(0,212,255,.6);animation:ping 2.4s infinite}
+  @keyframes ping{70%{box-shadow:0 0 0 9px rgba(0,212,255,0)}100%{box-shadow:0 0 0 0 rgba(0,212,255,0)}}
+  h1.name{font-family:var(--serif);font-weight:600;font-size:clamp(50px,8.5vw,108px);line-height:.98;
+    letter-spacing:-.01em;margin-bottom:8px}
+  h1.name .l2{font-style:italic;color:transparent;background:linear-gradient(120deg,var(--gold-bright),var(--gold),var(--gold-deep));
+    -webkit-background-clip:text;background-clip:text}
+  .roles{height:34px;margin:22px 0 18px;font-family:var(--display);font-weight:600;font-size:clamp(16px,2.4vw,24px);
+    letter-spacing:.01em;display:flex;align-items:center;gap:12px;color:var(--ivory)}
+  .roles .sep{color:var(--gold)}
+  .role-rotate{display:inline-block;position:relative;color:var(--gold-bright);min-width:1ch}
+  .lede{max-width:680px;color:var(--muted);font-size:clamp(15px,1.6vw,18.5px);line-height:1.75;margin-bottom:38px}
+  .lede b{color:var(--ivory);font-weight:600}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:50px;font-weight:600;
+    font-size:14.5px;letter-spacing:.02em;position:relative;overflow:hidden;z-index:0;transition:transform .3s var(--ease)}
+  .btn svg{width:17px;height:17px}
+  .btn-primary{background:linear-gradient(120deg,var(--gold),var(--gold-bright));color:#07070d}
+  .btn-primary::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--gold-bright),#fff3d6);transform:translateX(-101%);transition:transform .45s var(--ease);z-index:-1}
+  .btn-primary:hover{transform:translateY(-3px)} .btn-primary:hover::before{transform:translateX(0)}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--ivory)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright);transform:translateY(-3px)}
+  .socials{display:flex;gap:18px;margin-top:42px;align-items:center}
+  .socials a{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;
+    color:var(--muted);transition:.35s var(--ease)}
+  .socials a:hover{color:var(--gold-bright);border-color:var(--gold);transform:translateY(-4px)}
+  .socials svg{width:18px;height:18px}
+  .scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;color:var(--muted-2);
+    font-size:11px;letter-spacing:.25em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .mouse{width:22px;height:34px;border:1.5px solid var(--line-strong);border-radius:12px;position:relative}
+  .mouse::after{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:3px;height:7px;border-radius:2px;background:var(--gold);animation:scrolldot 1.8s infinite}
+  @keyframes scrolldot{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}80%{opacity:0;transform:translate(-50%,12px)}}
+
+  /* ---------- Section heads ---------- */
+  .sec-pad{padding:92px 0}
+  .sec-head{margin-bottom:46px;max-width:720px}
+  .sec-tag{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+  .sec-tag .num{font-family:var(--serif);font-style:italic;color:var(--muted-2);font-size:14px;letter-spacing:0}
+  .sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-.01em}
+  .sec-title em{font-style:italic;color:var(--gold-bright)}
+  .sec-sub{color:var(--muted);margin-top:20px;font-size:16.5px;line-height:1.75}
+
+  /* ---------- Marquee ---------- */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .marquee-track{display:flex;gap:48px;width:max-content;animation:scrollx 38s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-track span{font-family:var(--display);font-weight:600;font-size:17px;color:var(--muted);
+    display:inline-flex;align-items:center;gap:48px;white-space:nowrap}
+  .marquee-track span::after{content:"◆";color:var(--gold-deep);font-size:9px}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+
+  /* ---------- Stats ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--ink-2)}
+  .stat{padding:34px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;transition:background .4s}
+  .stat:hover{background:var(--surface)}
+  .stat:nth-child(4n){border-right:0}
+  .stat-num{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4vw,46px);color:var(--gold-bright);line-height:1;letter-spacing:-.01em}
+  .stat-label{color:var(--muted);font-size:13.5px;margin-top:14px;line-height:1.5}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
+  .about-body p{color:var(--muted);font-size:16.5px;margin-bottom:22px;line-height:1.8}
+  .about-body p b{color:var(--ivory);font-weight:600}
+  .about-body .first::first-letter{font-family:var(--serif);font-size:62px;float:left;line-height:.8;
+    padding:6px 14px 0 0;color:var(--gold-bright)}
+  .dual{background:linear-gradient(160deg,var(--surface),var(--ink-2));border:1px solid var(--line);border-radius:18px;padding:34px;position:relative;overflow:hidden}
+  .dual::before{content:"";position:absolute;top:-50%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(109,93,252,.12),transparent 70%)}
+  .dual h3{font-family:var(--serif);font-size:23px;font-weight:500;margin-bottom:8px}
+  .dual .tagline{color:var(--gold);font-size:13px;letter-spacing:.05em;margin-bottom:24px}
+  .dual-item{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line);position:relative;z-index:1}
+  .dual-item:first-of-type{border-top:0}
+  .dual-ic{width:40px;height:40px;flex-shrink:0;border:1px solid var(--gold-deep);border-radius:10px;display:grid;place-items:center;color:var(--gold-bright)}
+  .dual-ic svg{width:20px;height:20px}
+  .dual-item h4{font-size:15px;font-weight:600;margin-bottom:3px}
+  .dual-item p{color:var(--muted);font-size:13.5px;line-height:1.55}
+
+  /* ---------- Expertise ---------- */
+  .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .exp-card{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:32px;transition:.45s var(--ease);position:relative;overflow:hidden}
+  .exp-card::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(109,93,252,.08),transparent 55%);opacity:0;transition:.45s}
+  .exp-card:hover{transform:translateY(-6px);border-color:var(--gold-deep)}
+  .exp-card:hover::before{opacity:1}
+  .exp-ic{width:48px;height:48px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+    display:grid;place-items:center;color:var(--gold-bright);margin-bottom:22px;transition:.45s}
+  .exp-card:hover .exp-ic{background:var(--gold);color:#07070d;transform:rotate(-6deg)}
+  .exp-ic svg{width:23px;height:23px}
+  .exp-card h3{font-size:18px;font-weight:600;margin-bottom:12px;font-family:var(--display)}
+  .exp-card p{color:var(--muted);font-size:14px;line-height:1.65}
+
+  /* ---------- Ventures ---------- */
+  .ventures{display:grid;gap:26px}
+  .venture{display:grid;grid-template-columns:80px 1fr auto;gap:34px;align-items:center;
+    background:var(--ink-2);border:1px solid var(--line);border-radius:18px;padding:38px 40px;
+    transition:.5s var(--ease);position:relative;overflow:hidden;cursor:default}
+  .venture::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--gold),var(--gold-deep));transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease)}
+  .venture:hover{transform:translateY(-5px);border-color:var(--line-strong);background:var(--surface)}
+  .venture:hover::after{transform:scaleY(1)}
+  .v-mono{font-family:var(--serif);font-size:42px;font-style:italic;color:var(--gold-deep);transition:.5s;line-height:1}
+  .venture:hover .v-mono{color:var(--gold-bright)}
+  .v-body h3{font-family:var(--display);font-size:24px;font-weight:700;letter-spacing:.01em;display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+  .v-body h3 .v-kind{font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .v-body p{color:var(--muted);font-size:14.5px;line-height:1.6;max-width:640px}
+  .v-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .v-tags span{font-size:11px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:50px;padding:4px 12px}
+  .v-arrow{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--muted);transition:.45s}
+  .venture:hover .v-arrow{background:var(--gold);color:#07070d;border-color:var(--gold);transform:rotate(-45deg)}
+  .v-arrow svg{width:18px;height:18px}
+
+  /* ---------- Experience timeline ---------- */
+  .timeline{position:relative;padding-left:30px}
+  .timeline::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold),transparent)}
+  .tl-item{position:relative;padding:0 0 48px 40px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-25px;top:6px;width:11px;height:11px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--gold);transition:.4s}
+  .tl-item:hover::before{background:var(--gold);box-shadow:0 0 16px var(--gold)}
+  .tl-period{font-size:12.5px;letter-spacing:.1em;color:var(--gold);font-weight:600;text-transform:uppercase}
+  .tl-role{font-family:var(--display);font-size:20px;font-weight:700;margin:6px 0 2px}
+  .tl-co{color:var(--ivory);font-size:15px;margin-bottom:12px;font-weight:500}
+  .tl-co span{color:var(--muted-2);font-weight:400}
+  .tl-item p{color:var(--muted);font-size:14.5px;line-height:1.7}
+  .tl-item ul{list-style:none;margin-top:12px;display:grid;gap:7px}
+  .tl-item li{color:var(--muted);font-size:14px;padding-left:0;position:relative;line-height:1.6}
+  .tl-item li::before{content:"";position:absolute;left:-16px;top:9px;width:6px;height:6px;background:var(--gold-deep);border-radius:1px;transform:rotate(45deg)}
+  .tl-item li b{color:var(--ivory);font-weight:600}
+  .tl-group{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:20px 0 9px}
+  .tl-roles{font-size:12.5px;color:var(--muted-2);margin:-2px 0 12px;line-height:1.55}
+  .tl-roles b{color:var(--muted);font-weight:600}
+  .tl-recognition{margin-top:18px;font-size:13px;color:var(--muted);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+  .tl-recognition b{color:var(--gold);font-weight:600}
+
+  /* ---------- Voice / thought leadership ---------- */
+  .voice-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+  .voice-card{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:32px;transition:.45s var(--ease);position:relative;overflow:hidden}
+  .voice-card:hover{transform:translateY(-5px);border-color:var(--gold-deep)}
+  .voice-card .badge{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:block}
+  .voice-card h3{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);font-weight:500;line-height:1.15;margin-bottom:10px}
+  .voice-card h3 em{font-style:italic;color:var(--gold-bright)}
+  .voice-card p{color:var(--muted);font-size:14.5px;line-height:1.6}
+  .vc-rank{grid-column:span 5;background:linear-gradient(160deg,var(--surface),var(--ink-2))}
+  .vc-rank .big{font-family:var(--serif);font-size:78px;font-weight:600;color:var(--gold-bright);line-height:1}
+  .vc-news{grid-column:span 7}
+  .vc-book{grid-column:span 7}
+  .vc-creator{grid-column:span 5;background:linear-gradient(160deg,var(--surface),var(--ink-2))}
+  .availability{display:inline-flex;align-items:stretch;gap:22px;margin:8px 0 32px;border:1px solid var(--line);border-radius:16px;padding:15px 24px;background:rgba(255,255,255,.02);flex-wrap:wrap}
+  .av-item{display:flex;align-items:center;gap:13px}
+  .av-ic{color:var(--gold-bright);flex-shrink:0}
+  .av-ic svg{width:19px;height:19px;display:block}
+  .av-item .adot{width:9px;height:9px;border-radius:50%;background:#5fd27a;box-shadow:0 0 0 0 rgba(95,210,122,.55);animation:pingGreen 2.4s infinite;flex-shrink:0}
+  .av-l1{display:block;font-size:13.5px;font-weight:600;color:var(--ivory);line-height:1.35}
+  .av-l2{display:block;font-size:12.5px;color:var(--muted);line-height:1.4}
+  .av-sep{width:1px;background:var(--line);align-self:stretch}
+  .follow-link{display:inline-flex;align-items:center;gap:9px;margin-top:18px;font-size:13px;font-weight:600;color:#07070d;background:var(--gold);padding:10px 18px;border-radius:50px;transition:.3s var(--ease)}
+  .follow-link svg{width:15px;height:15px}
+  .follow-link:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 8px 22px rgba(109,93,252,.28)}
+  .follow-band{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-top:22px;background:linear-gradient(120deg,var(--surface),var(--ink-2));border:1px solid var(--gold-deep);border-radius:18px;padding:34px 42px;position:relative;overflow:hidden}
+  .follow-band::before{content:"";position:absolute;top:-60%;right:-8%;width:360px;height:360px;background:radial-gradient(circle,rgba(109,93,252,.15),transparent 70%);pointer-events:none}
+  .follow-band .fb-text{position:relative;z-index:1;max-width:660px}
+  .follow-band h3{font-family:var(--serif);font-weight:500;font-size:clamp(23px,3vw,32px);line-height:1.15;margin-bottom:8px}
+  .follow-band h3 em{font-style:italic;color:var(--gold-bright)}
+  .follow-band p{color:var(--muted);font-size:15px;line-height:1.6}
+  .follow-band .btn{position:relative;z-index:1;flex-shrink:0}
+  @media(max-width:680px){.follow-band{padding:28px}}
+  @keyframes pingGreen{70%{box-shadow:0 0 0 8px rgba(95,210,122,0)}100%{box-shadow:0 0 0 0 rgba(95,210,122,0)}}
+  .fav-link{display:inline-block;margin-top:16px;font-size:12.5px;font-weight:600;letter-spacing:.03em;color:var(--gold-bright)}
+  a.vc-rank:hover .fav-link{text-decoration:underline}
+  a.portrait-tag{text-decoration:none;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  a.portrait-tag:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.5)}
+  .rec-band{display:flex;align-items:center;gap:26px;margin-top:22px;background:linear-gradient(160deg,var(--surface),var(--ink-2));border:1px solid var(--line);border-radius:18px;padding:30px 36px;flex-wrap:wrap}
+  .rec-num{font-family:var(--serif);font-size:60px;font-weight:600;color:var(--gold-bright);line-height:1}
+  .rec-body{flex:1;min-width:230px}
+  .rec-body h3{font-family:var(--serif);font-size:23px;font-weight:500;margin-bottom:6px}
+  .rec-body p{color:var(--muted);font-size:14px;line-height:1.55}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:4px}
+  .rec-card{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;transition:.4s var(--ease)}
+  .rec-card:hover{transform:translateY(-5px);border-color:var(--gold-deep)}
+  .rec-card .qm{font-family:var(--serif);font-size:46px;color:var(--gold-deep);line-height:.2;height:20px}
+  .rec-card blockquote{color:var(--ivory);font-size:14px;line-height:1.62;margin:6px 0 18px;font-style:italic;flex:1}
+  .rec-author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
+  .rec-avatar{width:40px;height:40px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--display);font-weight:700;color:var(--gold-bright);flex-shrink:0;font-size:14px}
+  .ra-name{font-size:13.5px;font-weight:700;color:var(--ivory);line-height:1.3}
+  .ra-title{font-size:12px;color:var(--muted);line-height:1.35}
+  .rec-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:11.5px;font-weight:600;letter-spacing:.04em;color:var(--gold-bright);align-self:flex-start}
+  .rec-link:hover{text-decoration:underline}
+  @media(max-width:900px){.rec-grid{grid-template-columns:1fr}}
+  .pubs{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .pubs span{font-size:12px;border:1px solid var(--line);border-radius:50px;padding:5px 14px;color:var(--muted)}
+
+  /* ---------- AI & I flagship ---------- */
+  .sec-tag .star{font-family:var(--sans);color:var(--gold-bright);font-size:13px;letter-spacing:0}
+  .aii-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:30px}
+  .aii-card{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:32px;transition:.45s var(--ease);position:relative;overflow:hidden}
+  .aii-card::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(109,93,252,.08),transparent 55%);opacity:0;transition:.45s}
+  .aii-card:hover{transform:translateY(-6px);border-color:var(--gold-deep)} .aii-card:hover::before{opacity:1}
+  .aii-card .pnum{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--gold-deep);line-height:1}
+  .aii-card .pkind{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:16px 0 8px}
+  .aii-card h3{font-family:var(--display);font-size:19px;font-weight:700;margin-bottom:10px}
+  .aii-card p{color:var(--muted);font-size:14px;line-height:1.6}
+  .aii-band{display:grid;grid-template-columns:1.4fr 1fr;gap:34px;align-items:center;
+    background:linear-gradient(160deg,var(--surface),var(--ink-2));border:1px solid var(--line);border-radius:18px;padding:36px 40px}
+  .aii-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 20px}
+  .aii-metrics .m b{display:block;font-family:var(--serif);font-size:30px;color:var(--gold-bright);line-height:1}
+  .aii-metrics .m span{font-size:12.5px;color:var(--muted);margin-top:6px;display:block;line-height:1.4}
+  .aii-cta{text-align:left}
+  .aii-cta h4{font-family:var(--serif);font-size:22px;font-weight:500;margin-bottom:8px}
+  .aii-cta p{color:var(--muted);font-size:13.5px;margin-bottom:20px}
+
+  /* ---------- Research & Publications ---------- */
+  .research-feat{background:linear-gradient(160deg,var(--surface),var(--ink-2));border:1px solid var(--line);
+    border-radius:18px;padding:42px;position:relative;overflow:hidden;margin-bottom:24px}
+  .research-feat::before{content:"";position:absolute;top:-40%;right:-15%;width:340px;height:340px;background:radial-gradient(circle,rgba(109,93,252,.10),transparent 70%)}
+  .research-feat .rf-venue{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:8px 16px;position:relative;z-index:1}
+  .research-feat h3{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.8vw,32px);line-height:1.18;max-width:880px;position:relative;z-index:1}
+  .research-feat .rf-sum{color:var(--muted);font-size:15px;line-height:1.75;max-width:840px;margin-top:18px;position:relative;z-index:1}
+  .rf-metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;position:relative;z-index:1}
+  .rf-metrics span{font-size:12.5px;color:var(--ivory);border:1px solid var(--gold-deep);border-radius:50px;padding:6px 14px;background:rgba(109,93,252,.06)}
+  .rf-metrics span b{color:var(--gold-bright);font-weight:600}
+  .rf-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;position:relative;z-index:1}
+  .rf-btn{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;padding:11px 18px;border:1px solid var(--line-strong);border-radius:50px;color:var(--ivory);transition:.35s var(--ease)}
+  .rf-btn svg{width:15px;height:15px}
+  .rf-btn:hover{border-color:var(--gold);color:var(--gold-bright);transform:translateY(-3px)}
+  .wp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .wp-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .wp-meta{font-size:12px;color:var(--muted-2);margin-top:14px;line-height:1.5}
+  .wp-card{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:30px;transition:.45s var(--ease);position:relative;overflow:hidden}
+  .wp-card:hover{transform:translateY(-6px);border-color:var(--gold-deep)}
+  .wp-card .wp-ic{width:42px;height:42px;border-radius:11px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--gold-bright);margin-bottom:18px}
+  .wp-card .wp-ic svg{width:21px;height:21px}
+  .wp-card .badge{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:block}
+  .wp-card h3{font-family:var(--serif);font-size:21px;font-weight:500;line-height:1.2;margin-bottom:8px}
+  .wp-card p{color:var(--muted);font-size:13.5px;line-height:1.6}
+  .wp-card.soon{border-style:dashed;opacity:.85}
+  .wp-card.soon .badge{color:var(--muted-2)}
+
+  /* ---------- Masters Projects ---------- */
+  .proj-disc{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;
+    margin:34px 0 18px;display:flex;align-items:center;gap:14px}
+  .proj-disc::after{content:"";flex:1;height:1px;background:var(--line)}
+  .proj-disc:first-of-type{margin-top:0}
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .proj-card{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:24px;transition:.4s var(--ease);position:relative;overflow:hidden}
+  .proj-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),var(--gold-deep));transform:scaleY(0);transform-origin:top;transition:transform .4s var(--ease)}
+  .proj-card:hover{transform:translateY(-5px);border-color:var(--gold-deep)}
+  .proj-card:hover::before{transform:scaleY(1)}
+  .proj-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}
+  .proj-ic{width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--gold-bright);transition:.4s;flex-shrink:0}
+  .proj-card:hover .proj-ic{background:var(--gold);color:#07070d;transform:rotate(-6deg)}
+  .proj-ic svg{width:20px;height:20px}
+  .proj-cat{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;border:1px solid var(--line);border-radius:50px;padding:4px 11px;white-space:nowrap}
+  .proj-card h3{font-family:var(--display);font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.25}
+  .proj-card p{color:var(--muted);font-size:12.8px;line-height:1.55}
+  .proj-card.has-repo{cursor:pointer}
+  .proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .proj-tags span{font-size:10.5px;letter-spacing:.02em;color:var(--muted);border:1px solid var(--line);border-radius:50px;padding:3px 9px;white-space:nowrap}
+  .proj-repo{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:12px;font-weight:600;color:var(--muted);transition:color .3s}
+  .proj-repo svg{width:14px;height:14px}
+  .proj-card.has-repo:hover .proj-repo{color:var(--gold-bright)}
+  /* ---------- Hackathon ---------- */
+  .hack-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .hack-card{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:36px;transition:.45s var(--ease);position:relative;overflow:hidden}
+  .hack-card.lead{background:linear-gradient(160deg,var(--surface),var(--ink-2))}
+  .hack-card.lead::before{content:"";position:absolute;top:-40%;right:-20%;width:280px;height:280px;background:radial-gradient(circle,rgba(109,93,252,.10),transparent 70%)}
+  .hack-card:hover{transform:translateY(-5px);border-color:var(--gold-deep)}
+  .hack-card>*{position:relative;z-index:1}
+  .hack-card .badge{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;display:block}
+  .hack-card .big{font-family:var(--serif);font-size:60px;font-weight:600;color:var(--gold-bright);line-height:1;margin-bottom:8px}
+  .hack-card h3{font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.18;margin-bottom:10px}
+  .hack-card h3 em{font-style:italic;color:var(--gold-bright)}
+  .hack-card p{color:var(--muted);font-size:14.5px;line-height:1.65}
+  /* ---------- Skills ---------- */
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .skill-group{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:28px;transition:.4s var(--ease)}
+  .skill-group:hover{border-color:var(--gold-deep);transform:translateY(-4px)}
+  .skill-group h3{font-family:var(--display);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:18px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{font-size:12.5px;color:var(--ivory);border:1px solid var(--line);border-radius:8px;padding:6px 12px;background:var(--surface);transition:.3s}
+  .chips span:hover{border-color:var(--gold);color:var(--gold-bright);transform:translateY(-2px)}
+  /* ---------- Awards ---------- */
+  .awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .award-card{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;gap:16px;align-items:flex-start;transition:.4s var(--ease);position:relative;overflow:hidden}
+  .award-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),var(--gold-deep));transform:scaleY(0);transform-origin:top;transition:transform .4s var(--ease)}
+  .award-card:hover{border-color:var(--gold-deep);transform:translateY(-4px)}
+  .award-card:hover::before{transform:scaleY(1)}
+  .award-ic{width:42px;height:42px;flex-shrink:0;border-radius:11px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--gold-bright);transition:.4s}
+  .award-card:hover .award-ic{background:var(--gold);color:#07070d;transform:rotate(-6deg)}
+  .award-ic svg{width:21px;height:21px}
+  .award-card h3{font-family:var(--display);font-size:15px;font-weight:700;margin-bottom:4px;line-height:1.25}
+  .award-card p{color:var(--muted);font-size:12.8px;line-height:1.5}
+
+  @media(max-width:900px){
+    .aii-pillars,.wp-grid{grid-template-columns:1fr}
+    .aii-band{grid-template-columns:1fr;gap:28px}
+    .research-feat{padding:30px}
+    .proj-grid{grid-template-columns:repeat(2,1fr)}
+    .hack-grid{grid-template-columns:1fr}
+    .skills-grid{grid-template-columns:repeat(2,1fr)}
+    .awards-grid{grid-template-columns:repeat(2,1fr)}
+  }
+
+  /* ---------- Education ---------- */
+  .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:30px}
+  .edu-card{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;gap:20px;align-items:flex-start;transition:.4s}
+  .edu-card:hover{border-color:var(--gold-deep);transform:translateY(-4px)}
+  .edu-yr{font-family:var(--serif);font-style:italic;color:var(--gold-deep);font-size:14px;white-space:nowrap}
+  .edu-card h3{font-size:16.5px;font-weight:600;margin-bottom:4px}
+  .edu-card p{color:var(--muted);font-size:13.5px}
+  .certs{border:1px solid var(--line);border-radius:14px;padding:26px 30px;background:var(--ink-2)}
+  .certs .lab{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:block}
+  .certs-list{display:flex;flex-wrap:wrap;gap:10px}
+  .certs-list span{font-size:13px;border:1px solid var(--line);border-radius:8px;padding:7px 14px;color:var(--muted);transition:.3s}
+  .certs-list span:hover{border-color:var(--gold);color:var(--gold-bright)}
+  .train-row{margin-top:16px}
+  .train-cat{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);font-weight:600;margin-bottom:9px}
+
+  /* ---------- Contact ---------- */
+  .contact{text-align:center;padding:104px 0}
+  .contact .aurora .b1{top:-200px;left:30%}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(38px,6vw,76px);line-height:1.05;margin-bottom:24px;position:relative;z-index:2}
+  .contact h2 em{font-style:italic;color:var(--gold-bright)}
+  .contact .lede{margin:0 auto 40px;text-align:center;position:relative;z-index:2}
+  .contact-cta{position:relative;z-index:2}
+  .mail-link{display:inline-flex;align-items:center;gap:14px;font-family:var(--display);font-size:clamp(18px,2.6vw,26px);
+    font-weight:600;color:var(--gold-bright);border-bottom:1px solid var(--gold-deep);padding-bottom:6px;transition:.4s;position:relative;z-index:2}
+  .mail-link:hover{gap:20px;border-color:var(--gold-bright)}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line);padding:46px 0}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .foot p{color:var(--muted-2);font-size:13px}
+  .foot .fsoc{display:flex;gap:22px}
+  .foot .fsoc a{color:var(--muted);font-size:13px;transition:.3s}
+  .foot .fsoc a:hover{color:var(--gold-bright)}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(38px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+  .reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.4s}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:46px}
+    .hero-portrait{grid-row:1;max-width:280px;margin-top:30px}
+    .hero{padding-top:110px}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .exp-grid{grid-template-columns:repeat(2,1fr)}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(2n){border-right:0}
+    .voice-grid>*{grid-column:span 12!important}
+    .venture{grid-template-columns:1fr;gap:18px;padding:30px}
+    .v-arrow{display:none}
+    .v-mono{font-size:34px}
+  }
+  @media(max-width:1024px){
+    nav ul{position:fixed;inset:0 0 0 auto;width:80%;max-width:340px;background:rgba(12,13,18,.98);
+      -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);flex-direction:column;justify-content:flex-start;align-items:flex-start;
+      gap:20px;padding:104px 32px 48px;overflow-y:auto;transform:translateX(100%);
+      transition:transform .5s var(--ease);border-left:1px solid var(--line);z-index:90}
+    nav ul.open{transform:translateX(0)}
+    nav ul>li{width:100%}
+    nav ul a{font-size:17px}
+    .caret{display:none}
+    .dropdown{position:static;transform:none;opacity:1;visibility:visible;background:none;border:0;
+      box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;padding:8px 0 0 16px;min-width:0}
+    .dropdown a{font-size:14.5px;padding:7px 0;color:var(--muted-2)}
+    .dropdown a:hover{background:none;color:var(--gold-bright)}
+    .burger{display:flex;z-index:95}
+    .burger.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .burger.x span:nth-child(2){opacity:0}
+    .burger.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .brand small{display:none}
+  }
+  @media(max-width:680px){
+    .av-sep{display:none}
+    .exp-grid{grid-template-columns:1fr}
+    .edu-grid{grid-template-columns:1fr}
+    .proj-grid{grid-template-columns:1fr}
+    .skills-grid{grid-template-columns:1fr}
+    .awards-grid{grid-template-columns:1fr}
+    .sec-pad{padding:64px 0}
+    .wrap{padding:0 20px}
+    .about-body .first::first-letter{font-size:48px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;transition-duration:.2s!important}
+    .blob{animation:none}.marquee-track{animation:none}
+  }
+
+  /* ===== Vaibhav palette overrides ===== */
+  h1.name .l2{background:linear-gradient(120deg,#6d5dfc,#00d4ff,#c44bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .portrait-frame img{object-position:50% 16%}
+  .btn-primary{background:linear-gradient(120deg,#6d5dfc,#c44bff);color:#fff}
+  .btn-primary::before{background:linear-gradient(120deg,#7c6dff,#00d4ff)}
+  .btn-primary:hover{box-shadow:0 14px 40px -12px rgba(109,93,252,.7)}
+  .nav-cta:hover,.follow-link:hover,.exp-card:hover .exp-ic,.proj-card:hover .proj-ic,.award-card:hover .award-ic{color:#07070d!important}
+  .venture:hover .v-arrow{color:#07070d}
+  ::selection{background:#6d5dfc;color:#fff}
+  /* Flagship band */
+  .flag{display:grid;grid-template-columns:1.25fr .9fr;gap:42px;align-items:center;background:linear-gradient(160deg,var(--surface),var(--ink-2));border:1px solid var(--line);border-radius:20px;padding:42px;position:relative;overflow:hidden}
+  .flag::before{content:"";position:absolute;top:-40%;right:-12%;width:360px;height:360px;background:radial-gradient(circle,rgba(196,75,255,.14),transparent 70%);pointer-events:none}
+  .flag>*{position:relative;z-index:1}
+  .flag .live{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#5fd27a;border:1px solid rgba(95,210,122,.3);background:rgba(95,210,122,.08);border-radius:50px;padding:6px 13px;margin-bottom:18px}
+  .flag .live i{width:8px;height:8px;border-radius:50%;background:#5fd27a;animation:pingGreen 2.4s infinite}
+  .flag h3{font-family:var(--serif);font-size:clamp(28px,3.6vw,42px);font-weight:500;line-height:1.05;margin-bottom:6px}
+  .flag .kind{color:var(--gold);font-size:13px;letter-spacing:.04em;margin-bottom:18px;font-weight:500}
+  .flag p{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:20px}
+  .flag-side{display:grid;gap:13px}
+  .flag-m{border:1px solid var(--line);border-radius:13px;padding:15px 17px;background:rgba(255,255,255,.02)}
+  .flag-m b{font-family:var(--serif);color:var(--gold-bright);font-size:20px;display:block;line-height:1.1}
+  .flag-m span{color:var(--muted);font-size:12.5px}
+  .flag-side .btn{margin-top:4px;justify-content:center}
+  @media(max-width:900px){.flag{grid-template-columns:1fr;gap:28px;padding:32px}}
+  /* engagements row */
+  .eng{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .eng span{font-size:13px;color:var(--ivory);border:1px solid var(--line);border-radius:50px;padding:7px 16px;background:var(--ink-2);transition:.3s}
+  .eng span:hover{border-color:var(--gold-deep);color:var(--gold-bright)}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="glow"></div>
+
+<!-- NAV -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="monogram">VA</span>
+      <span>Vaibhav Aggarwal<small>Head of Applied AI</small></span>
+    </a>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li class="has-drop"><a href="#expertise">Expertise <span class="caret">&#9662;</span></a>
+          <ul class="dropdown">
+            <li><a href="#expertise">Core Expertise</a></li>
+            <li><a href="#skills">Skills &amp; Stack</a></li>
+          </ul>
+        </li>
+        <li class="has-drop"><a href="#flagship">AI Work <span class="caret">&#9662;</span></a>
+          <ul class="dropdown">
+            <li><a href="#flagship">Flagship · Dev Accelerator</a></li>
+            <li><a href="#products">AI Products</a></li>
+            <li><a href="#builds">Personal Builds</a></li>
+          </ul>
+        </li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li class="has-drop"><a href="#education">Education <span class="caret">&#9662;</span></a>
+          <ul class="dropdown">
+            <li><a href="#education">Core &amp; Certifications</a></li>
+            <li><a href="#masters">Masters Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+  <div class="grid-overlay"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="ping"></span> London, UK · Head of Applied AI</span>
+      <h1 class="name">Vaibhav <span class="l2">Aggarwal</span></h1>
+      <div class="roles"><span>I build</span><span class="sep">·</span><span class="role-rotate" id="role">ServiceNow AI</span></div>
+      <p class="lede">
+        Senior AI leader who designs <b>and personally builds</b> enterprise AI on ServiceNow.
+        Builder of <b>Dev Accelerator</b> and the <b>Knowledge Quality Accelerator</b>, handpicked by the
+        <b>ServiceNow Customer Excellence Group</b>, sharing enterprise-AI insight with an audience of 30,000+.
+      </p>
+      <div class="availability">
+        <div class="av-item">
+          <span class="av-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><span class="av-l1">Based in London, UK</span><span class="av-l2">Delivering across the UK, India &amp; the UAE</span></div>
+        </div>
+        <span class="av-sep"></span>
+        <div class="av-item">
+          <span class="adot"></span>
+          <div><span class="av-l1">Open to senior AI engagements</span><span class="av-l2">ServiceNow AI architecture, practice leadership &amp; advisory</span></div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="#flagship" class="btn btn-primary">Explore the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        <a href="assets/Vaibhav-Aggarwal-CV.pdf" target="_blank" class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Download CV</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/digitalprocessarchitect/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></a>
+        <a href="mailto:vaibhavcssbb@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <span class="portrait-ring"></span>
+      <div class="portrait-frame">
+        <img src="assets/vaibhav.jpg" alt="Vaibhav Aggarwal" loading="eager"
+             onerror="this.style.display='none';this.closest('.portrait-frame').classList.add('noimg')" />
+        <div class="portrait-badge">
+          <span class="pb-ic">VA</span>
+          <div><div class="pb-t">Vaibhav Aggarwal</div><div class="pb-s">Head of Applied AI · AI Digital</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span class="mouse"></span>Scroll</div>
+</section>
+
+<div class="marquee"><div class="marquee-track"><span>Now Assist</span><span>AI Agents</span><span>AI Search</span><span>Virtual Agent</span><span>Predictive &amp; Task Intelligence</span><span>Document Intelligence</span><span>Workflow Data Fabric</span><span>Skill Kit</span><span>Flow Designer</span><span>IntegrationHub</span><span>Agentic AI</span><span>Anthropic</span><span>OpenAI</span><span>Gemini</span><span>Python</span><span>FastAPI</span><span>Next.js</span><span>AWS · GCP · Azure</span><span>Now Assist</span><span>AI Agents</span><span>AI Search</span><span>Virtual Agent</span><span>Predictive &amp; Task Intelligence</span><span>Document Intelligence</span><span>Workflow Data Fabric</span><span>Skill Kit</span><span>Flow Designer</span><span>IntegrationHub</span><span>Agentic AI</span><span>Anthropic</span><span>OpenAI</span><span>Gemini</span><span>Python</span><span>FastAPI</span><span>Next.js</span><span>AWS · GCP · Azure</span></div></div>
+
+<!-- STATS -->
+<section class="sec-pad" style="padding-top:64px"><div class="wrap">
+  <div class="stats reveal">
+    <div class="stat"><div class="stat-num" data-target="30" data-suffix="K+">0</div><div class="stat-label">Followers on LinkedIn</div></div>
+    <div class="stat"><div class="stat-num" data-target="20" data-suffix="+">0</div><div class="stat-label">Years of enterprise delivery</div></div>
+    <div class="stat"><div class="stat-num" data-target="7" data-suffix="">0</div><div class="stat-label">Named AI products shipped</div></div>
+    <div class="stat"><div class="stat-num" data-prefix="$" data-target="5" data-suffix="M">0</div><div class="stat-label">Global HR transformation led</div></div>
+  </div>
+</div></section>
+
+<!-- ABOUT -->
+<section class="sec-pad" id="about"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">01</span> Profile</div>
+    <h2 class="sec-title">Strategy on top, <em>hands on the keyboard</em>.</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-body reveal">
+      <p class="first">I lead AI practices and architect enterprise solutions, but I still write the code, ship the agents, and stand behind the numbers.</p>
+      <p>My work spans a <b>$5M global HR transformation at AXA XL</b> across 15+ countries, a <b>Head of Digital Operations</b> role at Deem Finance in Dubai, and the AI practice at AI Digital where I have shipped <b>seven named AI products</b>. I was selected by ServiceNow into their <b>Customer Excellence Group</b> as a Senior Technical AI Consultant, through a competitive interview process across the global partner network.</p>
+      <p>On the academic and craft side: an <b>MSc in Machine Learning &amp; AI</b>, a <b>Lean Six Sigma Black Belt</b>, and a production algorithmic-trading platform I built from scratch on the side. The combination is the point: board-level strategy, delivered with engineer-level depth.</p>
+    </div>
+    <div class="dual reveal d1">
+      <h3>Strategy, meet delivery</h3>
+      <div class="tagline">Board-level strategy · engineer-level depth</div>
+      <div class="dual-item">
+        <span class="dual-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <div><h4>ServiceNow Customer Excellence Group</h4><p>Selected as a Senior Technical AI Consultant across the global partner network.</p></div>
+      </div>
+      <div class="dual-item">
+        <span class="dual-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span>
+        <div><h4>Builder, not just advisor</h4><p>Ships production AI agents and platforms into live client environments, not slideware.</p></div>
+      </div>
+      <div class="dual-item">
+        <span class="dual-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+        <div><h4>20 years, three regions</h4><p>From regulated financial services to enterprise AI across the UK, India and the UAE.</p></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- EXPERTISE -->
+<section class="sec-pad" id="expertise"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">02</span> Expertise</div>
+    <h2 class="sec-title">Where I go <em>deep</em>.</h2>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card reveal">
+      <span class="exp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+      <h3>ServiceNow AI</h3>
+      <p>Now Assist, AI Agents, AI Search, Virtual Agent, Predictive &amp; Task Intelligence, Document Intelligence, Workflow Data Fabric, Skill Kit, Studio, Flow Designer, IntegrationHub and ATF, taken from design to production.</p>
+    </div>
+    <div class="exp-card reveal d1">
+      <span class="exp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8V15a3 3 0 0 0 4 2.8A3 3 0 0 0 12 21V5a2 2 0 0 0-3-2zM15 3a3 3 0 0 1 3 3 3 3 0 0 1 1 5.8V15a3 3 0 0 1-4 2.8"/></svg></span>
+      <h3>AI Engineering</h3>
+      <p>Agentic AI architecture and LLM APIs (Anthropic, OpenAI, Gemini) with n8n, Make, Cursor / Claude Code, Python, FastAPI, Next.js and TypeScript across AWS, GCP and Azure.</p>
+    </div>
+    <div class="exp-card reveal d2">
+      <span class="exp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+      <h3>Practice Leadership</h3>
+      <p>AI Readiness Frameworks, maturity assessment, use-case prioritisation, CoE design, governance &amp; Responsible AI, ADKAR change management and a Lean Six Sigma Black Belt.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- FLAGSHIP -->
+<section class="sec-pad" id="flagship"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="star">&#10038;</span> <span class="num">03</span> Flagship project</div>
+    <h2 class="sec-title">Dev Accelerator, <em>an SDLC team as AI</em>.</h2>
+  </div>
+  <div class="flag reveal">
+    <div>
+      <span class="live"><i></i> Live · in client pilots today</span>
+      <h3>Dev Accelerator</h3>
+      <div class="kind">Autonomous software-delivery platform</div>
+      <p>Takes a single stakeholder requirement and carries it all the way through to release artefacts. Seven specialised AI roles hand work to one another exactly like a real delivery team, collapsing what used to take a business analyst six-to-ten weeks into two-to-three days.</p>
+      <div class="v-tags"><span>Business Analyst</span><span>Tech Analyst</span><span>Developer</span><span>Tester</span><span>Release Manager</span><span>Tech Writer</span><span>Project Manager</span></div>
+    </div>
+    <div class="flag-side">
+      <div class="flag-m"><b>7 roles</b><span>autonomous AI delivery team</span></div>
+      <div class="flag-m"><b>6&#8211;10 wks &#8594; 2&#8211;3 days</b><span>business-analyst cycle time</span></div>
+      <div class="flag-m"><b>Requirement &#8594; release</b><span>full SDLC, end to end</span></div>
+      <a href="https://dev-accelerator.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary">View live project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- PRODUCTS -->
+<section class="sec-pad" id="products"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">04</span> Built &amp; shipped</div>
+    <h2 class="sec-title">The rest of the <em>portfolio</em>.</h2>
+    <p class="sec-sub">The AI practice at AI Digital (Octahedron Group), built from scratch: service portfolio, engagement model, and six more named products beyond the flagship.</p>
+  </div>
+  <div class="ventures">
+<article class="venture reveal"><div class="v-mono">Kq</div><div class="v-body"><h3>Knowledge Quality Accelerator <span class="v-kind">Now Assist Skill Kit</span></h3><p>Audits knowledge articles against ten AI-readiness criteria and generates ready-to-use rewrites. Business case: &pound;150&#8211;250K annual saving from 10% ticket deflection on a 100K-ticket enterprise.</p><div class="v-tags"><span>Now Assist</span><span>Skill Kit</span><span>Knowledge AI</span><span>&pound;150&#8211;250K saving</span></div></div><span class="v-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></article>
+<article class="venture reveal"><div class="v-mono">Ar</div><div class="v-body"><h3>AI Readiness Framework <span class="v-kind">6-domain assessment</span></h3><p>A 72-check, six-domain assessment producing a 12-month activation roadmap. Surfaces dormant AI features and quick wins that need no extra licensing. Delivered to enterprise clients including Kenvue.</p><div class="v-tags"><span>72 checks</span><span>12-month roadmap</span><span>Delivered to Kenvue</span></div></div><span class="v-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></article>
+<article class="venture reveal"><div class="v-mono">Sb</div><div class="v-body"><h3>SpringBoard <span class="v-kind">Agent library</span></h3><p>A library of 54 pre-built production AI agents across ITSM, HR, Finance, Legal, Procurement, Insurance and Public Sector, with a 2&#8211;4 week POC-to-production deployment model.</p><div class="v-tags"><span>54 agents</span><span>ITSM · HR · Finance</span><span>2&#8211;4 wk to prod</span></div></div><span class="v-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></article>
+<article class="venture reveal"><div class="v-mono">Af</div><div class="v-body"><h3>Production Agent Fleet <span class="v-kind">Shipped to clients</span></h3><p>GenAI Knowledge Article Reviewer (500+ person-days saved annually), AI Discovery Intelligence Agent (80&#8211;90% pre-call research reduction), Validata.AI data-quality platform (99.8% accuracy), Incident Quality Analyst, Candidate Onboarding &amp; PTO Self-Service, Invoice Remediation and a User Story / Test Script Generator.</p><div class="v-tags"><span>500+ days saved</span><span>99.8% accuracy</span><span>ITSM · HRSD · P2P · SDLC</span></div></div><span class="v-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></article>
+  </div>
+  <div class="proj-disc reveal" style="margin-top:40px">Selected engagements personally led</div>
+  <div class="eng reveal">
+    <span>Kenvue · 22,000 employees</span><span>Tropic.bio · totalRNA Atlas</span><span>TQ IMA · Agentic Launchpad</span><span>Bain &amp; Co · CMDB maturity</span><span>Bradford City Council</span>
+  </div>
+</div></section>
+
+<!-- PERSONAL BUILDS -->
+<section class="sec-pad" id="builds"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">05</span> Personal builds &amp; ventures</div>
+    <h2 class="sec-title">Built on the <em>side</em>, shipped for real.</h2>
+  </div>
+  <div class="ventures">
+<article class="venture reveal"><div class="v-mono">At</div><div class="v-body"><h3>Algorithmic Trading Platform <span class="v-kind">Personal build</span></h3><p>An end-to-end production trading system, built from scratch. TradingView signal generation, a Python execution engine and the Interactive Brokers API for live order management. Runs concurrent strategies with independent risk rules, an LLM-driven natural-language strategy interface, and ML pipelines for market-regime classification, sentiment scoring and catastrophic-event detection, with full Sharpe / drawdown / expectancy analytics and a backtesting engine.</p><div class="v-tags"><span>Python</span><span>TradingView</span><span>IBKR API</span><span>OpenAI / Anthropic</span><span>scikit-learn</span></div></div><span class="v-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></article>
+<article class="venture reveal"><div class="v-mono">Sg</div><div class="v-body"><h3>SkillGPS <span class="v-kind">Skills Intelligence</span></h3><p>An AI skills-intelligence platform that infers skills from people's actual work (commits, PRs, tickets), each backed by a quoted evidence snippet, then blends five trust signals into an organisation-wide Trust Index for succession, workforce planning and a talent marketplace.</p><div class="v-tags"><span>Claude Opus 4.8</span><span>Evidence Inference</span><span>Multi-Signal Trust</span><span>Workforce Planning</span><span>Privacy-first</span></div></div><span class="v-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></article>
+  </div>
+</div></section>
+
+<!-- EXPERIENCE -->
+<section class="sec-pad" id="experience"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">06</span> Career</div>
+    <h2 class="sec-title">Twenty years of <em>enterprise delivery</em>.</h2>
+  </div>
+  <div class="timeline">
+<div class="tl-item reveal"><div class="tl-period">2024 &#8211; Present</div><div class="tl-role">Head of AI Solutions &amp; Products</div><div class="tl-co">AI Digital (Octahedron Group) <span>London, UK</span></div><ul><li>Built a ServiceNow-native AI practice from scratch: portfolio, engagement model and team.</li><li>Productised <b>seven named AI offerings</b> and runs all senior client engagements end to end.</li><li>Trained the team from CEO to analyst; selected into the <b>ServiceNow Customer Excellence Group</b>.</li></ul></div>
+<div class="tl-item reveal"><div class="tl-period">Nov 2020 &#8211; Sep 2024</div><div class="tl-role">Global HR PMO Lead</div><div class="tl-co">AXA XL (XL Catlin Services SE) <span>India &#8594; London</span></div><ul><li>Owned the programme-management spine of a <b>$5M AI-enabled global HR transformation across 15+ countries</b>.</li><li>Deployed intelligent automation and AI-enabled HR workflows; measurable gains in cycle time, deflection and satisfaction.</li><li>Established a Centre of Excellence for sustained AI and automation capability post-programme.</li></ul></div>
+<div class="tl-item reveal"><div class="tl-period">Jan 2020 &#8211; Jul 2020</div><div class="tl-role">Head of Digital Operations Transformation</div><div class="tl-co">Deem Finance <span>Dubai, UAE · reporting to CTO</span></div><ul><li>Led the shift to a fully digital financial-services operating model; team of 12, $15M budget.</li><li><b>30%</b> manual-workload reduction, <b>99.9%</b> uptime on multi-cloud, <b>20%</b> operational cost reduction in year one.</li></ul></div>
+<div class="tl-item reveal"><div class="tl-period">2015 &#8211; 2019</div><div class="tl-role">Senior Manager, Process Automation &amp; Optimisation</div><div class="tl-co">AXA Business Services (GBS) <span>Pune, India</span></div><ul><li>Governed a <b>&euro;3.3M / ~250 FTE</b> enterprise efficiency programme end to end.</li><li>Led a team of 12 Six Sigma Black Belts and developers; P&amp;C CoE Product Owner for RPA.</li><li>Generated <b>$2M</b> in revenue leading go-to-market for AXA's Operational Excellence Consulting line.</li></ul></div>
+<div class="tl-item reveal"><div class="tl-period">2004 &#8211; 2015</div><div class="tl-role">Earlier Career · Process Excellence &amp; GCC Operations</div><div class="tl-co">Maersk · BNY Mellon · WNS · Allianz <span>Pune &amp; Trivandrum, India</span></div><ul><li>Master Black Belt P2P transformation at Maersk across India, the Philippines and China.</li><li>A $330K data-archival build at BNY Mellon; large-team leadership and Six Sigma programmes at WNS and Allianz.</li></ul></div>
+  </div>
+</div></section>
+
+<!-- INSIGHTS -->
+<section class="sec-pad" id="insights"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">07</span> Thought leadership</div>
+    <h2 class="sec-title">Read by 30,000+ on <em>enterprise AI</em>.</h2>
+    <p class="sec-sub">A regular voice on ServiceNow AI architecture, agentic systems and governance, breaking down how enterprises actually ship AI.</p>
+  </div>
+  <div class="voice-grid">
+    <a href="https://www.linkedin.com/in/digitalprocessarchitect/recent-activity/all/" target="_blank" rel="noopener" class="voice-card vc-rank reveal" style="grid-column:span 5">
+      <span class="badge">LinkedIn audience</span>
+      <div class="big">30K+</div>
+      <p>Followers across a fast-growing ServiceNow AI community, with posts regularly drawing 40&#8211;500+ reactions.</p>
+      <span class="fav-link">Follow on LinkedIn &#8594;</span>
+    </a>
+<a href="https://www.linkedin.com/in/digitalprocessarchitect/recent-activity/all/" target="_blank" rel="noopener" class="voice-card reveal " style="grid-column:span 7"><span class="badge">ServiceNow Platform</span><h3>ServiceNow is bigger than ITSM</h3><p>The full ServiceNow ecosystem at a glance: AI &amp; agentic systems, workflow automation, data &amp; knowledge, integration and governance, and how they compound into value. 508+ reactions.</p></a>
+<a href="https://www.linkedin.com/in/digitalprocessarchitect/recent-activity/all/" target="_blank" rel="noopener" class="voice-card reveal " style="grid-column:span 4"><span class="badge">AI Architecture</span><h3>The control tower for enterprise AI</h3><p>A governed architecture that can sense data, decide with any model, act through any workflow, and stay observable across systems and identities.</p></a>
+<a href="https://www.linkedin.com/in/digitalprocessarchitect/recent-activity/all/" target="_blank" rel="noopener" class="voice-card reveal " style="grid-column:span 4"><span class="badge">Implementation</span><h3>ServiceNow AI needs more than a pilot</h3><p>An eight-step blueprint, from AI strategy and high-value use cases to governance, architecture, adoption and the Value / Trust / Scale gates.</p></a>
+<a href="https://www.linkedin.com/in/digitalprocessarchitect/recent-activity/all/" target="_blank" rel="noopener" class="voice-card reveal " style="grid-column:span 4"><span class="badge">NVIDIA &times; ServiceNow</span><h3>NVIDIA thinks. ServiceNow acts.</h3><p>How Project Arc, the AI Control Tower, NVIDIA OpenShell and Blackwell infrastructure combine into governed, auditable autonomous workflows.</p></a>
+<a href="https://www.linkedin.com/in/digitalprocessarchitect/recent-activity/all/" target="_blank" rel="noopener" class="voice-card reveal " style="grid-column:span 6"><span class="badge">Governance</span><h3>MCP servers need governance before scale</h3><p>Twelve ways ServiceNow can govern the MCP lifecycle: AI gateway, approval workflows, OAuth, scoped tool exposure, kill switches and a trusted MCP registry.</p></a>
+<a href="https://www.linkedin.com/in/digitalprocessarchitect/recent-activity/all/" target="_blank" rel="noopener" class="voice-card reveal " style="grid-column:span 6"><span class="badge">ML Foundations</span><h3>Predict it. Match it. Group it.</h3><p>Classification vs. similarity vs. clustering inside ServiceNow, and which one to reach for to improve routing, accelerate resolution or surface hidden patterns.</p></a>
+  </div>
+  <div class="follow-band reveal">
+    <div class="fb-text">
+      <h3>Follow the work in <em>real time</em>.</h3>
+      <p>New breakdowns on ServiceNow AI, agentic architecture and governance every few days.</p>
+    </div>
+    <a href="https://www.linkedin.com/in/digitalprocessarchitect/" target="_blank" rel="noopener" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg> Follow on LinkedIn</a>
+  </div>
+</div></section>
+
+<!-- MASTERS -->
+<section class="sec-pad" id="masters"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">08</span> Masters projects</div>
+    <h2 class="sec-title">Applied AI, <em>built end to end</em>.</h2>
+    <p class="sec-sub">A hands-on portfolio from the MSc (Machine Learning &amp; AI) and Executive PG programmes, spanning generative AI, NLP, deep learning, classical machine learning and analytics.</p>
+  </div>
+  <div class="proj-disc reveal">Generative &amp; Agentic AI</div>
+  <div class="proj-grid">
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">RAG Assistant</span></div><h3>Mr.HelpMateAI</h3><p>A retrieval-augmented insurance assistant that answers policy questions grounded in source documents.</p><div class="proj-tags"><span>Python</span><span>LangChain</span><span>ChromaDB</span><span>OpenAI</span></div></article>
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">Recommendation Bot</span></div><h3>ShopAssistAI</h3><p>A conversational agent that recommends laptops by understanding a user's needs and budget.</p><div class="proj-tags"><span>Python</span><span>OpenAI</span><span>Function Calling</span></div></article>
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">LLM Agent</span></div><h3>Semantic Spotter</h3><p>An email-summarization agent that distils long threads into their essential points.</p><div class="proj-tags"><span>Python</span><span>LangChain</span><span>LlamaIndex</span><span>RAG</span></div></article>
+  </div>
+  <div class="proj-disc reveal">Natural Language Processing</div>
+  <div class="proj-grid">
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">Text Classification</span></div><h3>Automatic Ticket Classification</h3><p>Routes incoming support tickets to the right team by classifying their text.</p><div class="proj-tags"><span>Python</span><span>NLP</span><span>scikit-learn</span><span>NMF</span></div></article>
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">Named Entity Recognition</span></div><h3>Healthcare Entity Recognition</h3><p>Extracts diseases, treatments and other clinical entities from medical text.</p><div class="proj-tags"><span>Python</span><span>spaCy</span><span>CRF</span><span>NER</span></div></article>
+  </div>
+  <div class="proj-disc reveal">Deep Learning · Computer Vision</div>
+  <div class="proj-grid">
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">CNN</span></div><h3>Melanoma Detection</h3><p>A convolutional network that classifies skin lesions to flag melanoma from images.</p><div class="proj-tags"><span>TensorFlow</span><span>Keras</span><span>CNN</span><span>Augmentation</span></div></article>
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">CNN</span></div><h3>Smart TV Gesture Recognition</h3><p>Recognises hand gestures from video to control a smart TV without a remote.</p><div class="proj-tags"><span>TensorFlow</span><span>Keras</span><span>Conv3D</span><span>CNN-LSTM</span></div></article>
+  </div>
+  <div class="proj-disc reveal">Machine Learning &amp; Analytics</div>
+  <div class="proj-grid">
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">Capstone</span></div><h3>Credit Card Fraud Detection</h3><p>Detects fraudulent transactions on highly imbalanced data. The programme capstone.</p><div class="proj-tags"><span>Python</span><span>scikit-learn</span><span>XGBoost</span><span>SMOTE</span></div></article>
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">Supervised ML</span></div><h3>Telecom Churn Prediction</h3><p>Predicts which telecom customers are most likely to churn, and why.</p><div class="proj-tags"><span>Python</span><span>scikit-learn</span><span>Logistic Reg.</span><span>PCA</span></div></article>
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">Supervised ML</span></div><h3>Bike Demand Forecasting</h3><p>Forecasts daily bike-rental demand from seasonal, weather and calendar signals.</p><div class="proj-tags"><span>Python</span><span>Linear Reg.</span><span>statsmodels</span></div></article>
+<article class="proj-card reveal"><div class="proj-top"><span class="proj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="proj-cat">Analytics · EDA</span></div><h3>Loan Risk Modelling</h3><p>Exploratory analysis surfacing the key drivers of credit and lending risk.</p><div class="proj-tags"><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span></div></article>
+  </div>
+</div></section>
+
+<!-- SKILLS -->
+<section class="sec-pad" id="skills"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">09</span> Skills &amp; stack</div>
+    <h2 class="sec-title">Core <em>competencies</em>.</h2>
+  </div>
+  <div class="skills-grid">
+<div class="skill-group reveal"><h3>ServiceNow AI</h3><div class="chips"><span>Now Assist</span><span>AI Agents</span><span>AI Search</span><span>Virtual Agent</span><span>Predictive &amp; Task Intelligence</span><span>Document Intelligence</span><span>Workflow Data Fabric</span><span>Skill Kit</span><span>Studio</span><span>Flow Designer</span><span>IntegrationHub</span><span>ATF</span></div></div>
+<div class="skill-group reveal"><h3>AI Engineering</h3><div class="chips"><span>Agentic AI</span><span>Anthropic</span><span>OpenAI</span><span>Gemini</span><span>n8n</span><span>Make.com</span><span>Cursor / Claude Code</span><span>Python</span><span>FastAPI</span><span>Next.js</span><span>TypeScript</span><span>AWS · GCP · Azure</span></div></div>
+<div class="skill-group reveal"><h3>Practice Leadership</h3><div class="chips"><span>AI Readiness Frameworks</span><span>Maturity Assessment</span><span>Use-Case Prioritisation</span><span>CoE Design</span><span>Governance &amp; Responsible AI</span><span>Change Management (ADKAR)</span><span>Lean Six Sigma Black Belt</span></div></div>
+  </div>
+</div></section>
+
+<!-- EDUCATION -->
+<section class="sec-pad" id="education"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="num">10</span> Credentials</div>
+    <h2 class="sec-title">Education &amp; <em>certifications</em>.</h2>
+  </div>
+  <div class="edu-grid">
+<div class="edu-card reveal"><span class="edu-yr">MSc</span><div><h3>Machine Learning &amp; AI</h3><p>Liverpool John Moores University, UK</p></div></div>
+<div class="edu-card reveal"><span class="edu-yr">PG Dip</span><div><h3>Machine Learning &amp; AI · Generative AI</h3><p>IIIT Bangalore, India</p></div></div>
+<div class="edu-card reveal"><span class="edu-yr">PG Dip</span><div><h3>IT Management</h3><p>Symbiosis University, India</p></div></div>
+<div class="edu-card reveal"><span class="edu-yr">BCA</span><div><h3>Computer Application</h3><p>Pune University, India</p></div></div>
+  </div>
+  <div class="certs reveal">
+    <span class="lab">Certifications</span>
+    <div class="certs-list"><span>Certified Generative AI with LLMs (DeepLearning.AI)</span><span>Lean Six Sigma Black Belt</span><span>PMP</span><span>PRINCE2 Practitioner</span><span>SAFe Agilist</span><span>AWS Certified</span></div>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="aurora"><div class="blob b1"></div><div class="blob b2"></div></div>
+  <div class="wrap">
+    <h2 class="reveal">Let's build enterprise AI that <em>actually ships</em>.</h2>
+    <p class="lede reveal d1">Advisory, ServiceNow AI architecture, practice leadership, or a conversation about agentic AI. I'd be glad to connect.</p>
+    <div class="contact-cta reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="mailto:vaibhavcssbb@gmail.com" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Email me</a>
+      <a href="https://www.linkedin.com/in/digitalprocessarchitect/" target="_blank" rel="noopener" class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg> Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <p>&copy; <span id="year"></span> Vaibhav Aggarwal · Head of Applied AI. All rights reserved.</p>
+    <div class="fsoc">
+      <a href="https://www.linkedin.com/in/digitalprocessarchitect/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:vaibhavcssbb@gmail.com">Email</a>
+      <a href="assets/Vaibhav-Aggarwal-CV.pdf" target="_blank">CV</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('img').forEach(img=>{img.addEventListener('contextmenu',e=>e.preventDefault());img.addEventListener('dragstart',e=>e.preventDefault());img.setAttribute('draggable','false');});
+  const header=document.getElementById('header'),progress=document.getElementById('progress');
+  function onScroll(){const y=window.scrollY;header.classList.toggle('scrolled',y>40);const h=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(h>0?(y/h)*100:0)+'%';}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>{menu.classList.toggle('open');burger.classList.toggle('x');});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.classList.remove('x');}));
+  const glow=document.getElementById('glow');
+  if(window.matchMedia('(pointer:fine)').matches){let gx=innerWidth/2,gy=innerHeight/2,cx=gx,cy=gy;addEventListener('mousemove',e=>{gx=e.clientX;gy=e.clientY;});(function loop(){cx+=(gx-cx)*.12;cy+=(gy-cy)*.12;glow.style.left=cx+'px';glow.style.top=cy+'px';requestAnimationFrame(loop);})();}else{glow.style.display='none';}
+  const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const roles=['ServiceNow AI','agentic AI platforms','enterprise AI architecture','AI governance','Now Assist &amp; AI Agents','the Dev Accelerator'];const roleEl=document.getElementById('role');let ri=0;
+  function rotate(){roleEl.style.transition='opacity .4s, transform .4s';roleEl.style.opacity='0';roleEl.style.transform='translateY(-8px)';setTimeout(()=>{ri=(ri+1)%roles.length;roleEl.innerHTML=roles[ri];roleEl.style.opacity='1';roleEl.style.transform='translateY(0)';},420);}
+  setInterval(rotate,2600);
+  const counted=new WeakSet();
+  function animateCount(el){if(counted.has(el))return;counted.add(el);const target=parseFloat(el.dataset.target);const prefix=el.dataset.prefix||'';const suffix=el.dataset.suffix||'';const dur=1600;const start=performance.now();function tick(now){const p=Math.min((now-start)/dur,1);const eased=1-Math.pow(1-p,3);el.textContent=prefix+Math.round(target*eased)+suffix;if(p<1)requestAnimationFrame(tick);else el.textContent=prefix+target+suffix;}requestAnimationFrame(tick);}
+  const statIO=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){animateCount(en.target);statIO.unobserve(en.target);}});},{threshold:.6});
+  document.querySelectorAll('.stat-num').forEach(el=>statIO.observe(el));
+  if(window.matchMedia('(pointer:fine)').matches){document.querySelectorAll('.venture, .exp-card').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();const px=(e.clientX-r.left)/r.width-.5;const py=(e.clientY-r.top)/r.height-.5;card.style.transform=`translateY(-5px) perspective(900px) rotateX(${-py*4}deg) rotateY(${px*5}deg)`;});card.addEventListener('mouseleave',()=>{card.style.transform='';});});}
+  const blobs=document.querySelectorAll('.hero .blob');
+  if(window.matchMedia('(pointer:fine)').matches){addEventListener('mousemove',e=>{const dx=(e.clientX/innerWidth-.5),dy=(e.clientY/innerHeight-.5);blobs.forEach((b,i)=>{const f=(i+1)*14;b.style.marginLeft=(dx*f)+'px';b.style.marginTop=(dy*f)+'px';});});}
+</script>
+</body>
+</html>
